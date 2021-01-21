@@ -16,12 +16,27 @@
                 padding: 8px;
                 align-content: center;
             }
-            input {
+            input[type="text"] {
+                background-color: white;
                 width: 45vw;
                 height: 6vh;
                 border: 2px solid;
                 border-color: rgba(0,0,0,.08);
                 border-radius: 35px;
+            }
+            input[type="submit"]{
+                background-color: #f8f9fa;
+                height: 36px;
+                width: 130px;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                margin: 25px 6px 0 6px;
+                cursor:pointer;
+            }
+            input[type="submit"]:hover{
+                border-color: rgba(0,0,0,.1);
             }
             #buttons {
                 display: flex;
@@ -53,11 +68,12 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                align-content: center;
                 position: absolute;
                 top: 0;
                 right: 0;
                 left: 0;
-                bottom: 0;
+                bottom: 100px;
             }
         </style>
         <link rel="icon" href="https://img-authors.flaticon.com/google.jpg">
@@ -78,12 +94,10 @@
             <div>
                 <input type="text">
             </div>
+            <div id="buttons">
+                <input type="submit" value="Google Search">
+                <input type="submit" value="I'm Feeling Lucky">
+            </div>
         </div>
-        <!--
-        <div id="buttons">
-            <h1>Google Search</h1>
-            <h1>Feeling Lucky</h1>
-        </div>
-    -->
     </body>
 </html>
