@@ -4,13 +4,16 @@
         
         <title>Google</title>
         <style>
-            ul {
+            body {
+                margin:0;
+            }
+            #navbar-ul {
                 list-style-type: none;
-                margin: 0;
+                margin: 10px;
                 padding: 0;
                 float:right;
             }
-            li {
+            .navbar-li {
                 float:left;
                 display: block;
                 padding: 8px;
@@ -23,6 +26,8 @@
                 border: 2px solid;
                 border-color: rgba(0,0,0,.08);
                 border-radius: 35px;
+                font-size: 16px;
+                pointer-events: all;
             }
             input[type="submit"]{
                 background-color: #f8f9fa;
@@ -43,6 +48,7 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+                pointer-events: all;
             }
             
             #profile {
@@ -74,17 +80,50 @@
                 right: 0;
                 left: 0;
                 bottom: 100px;
+                pointer-events: none;
+            }
+            #footer {
+                border:solid rgba(0,0,0,.08) 1px;
+                background-color: rgba(0,0,0,.06);
+                position: fixed;
+                bottom: 0;
+                height: 6vh;
+                width: 100%;
+                margin: 0;
+                align-content: center;
+            }
+            #footer ul{
+                position: relative;
+                bottom: 5px;
+                list-style-type: none;
+                padding: 0;
+            }
+            #footer ul li a{
+                margin: 3px 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                text-decoration: none;
+                color: #70757a;
+            }
+            #footer ul li a:hover{
+                text-decoration:underline;
+            }
+            .footerL {
+                float:left;
+            }
+            .footerR {
+                float:right;
             }
         </style>
         <link rel="icon" href="https://img-authors.flaticon.com/google.jpg">
     </head>
     <body>
         <div id="navbar">
-            <ul>
-                <li><a class="gb" href="https://mail.google.com" target="_blank">Gmail</a></li>
-                <li><a class="gb" href="https://images.google.com">Images</a></li>
-                <li><img class="gb-img" src="https://static.thenounproject.com/png/756729-200.png"></li>
-                <li><img class="gb-img" src="https://lh3.googleusercontent.com/ogw/ADGmqu8zbpHM6-sI4CuTPJGRCvE-tVtTnO4oJqn4JKEC=s32-c-mo" id="profile"></li>
+            <ul id="navbar-ul">
+                <li class="navbar-li"><a class="gb" href="https://mail.google.com" target="_blank">Gmail</a></li>
+                <li class="navbar-li"><a class="gb" href="https://images.google.com">Images</a></li>
+                <li class="navbar-li"><img class="gb-img" src="https://static.thenounproject.com/png/756729-200.png"></li>
+                <li class="navbar-li"><img class="gb-img" src="https://lh3.googleusercontent.com/ogw/ADGmqu8zbpHM6-sI4CuTPJGRCvE-tVtTnO4oJqn4JKEC=s32-c-mo" id="profile"></li>
             </ul>
         </div>
         <div id="giaf">
@@ -98,6 +137,19 @@
                 <input type="submit" value="Google Search">
                 <input type="submit" value="I'm Feeling Lucky">
             </div>
+        </div>
+        <div id="footer">
+            <ul>
+                <li class="footerL"><a href="https://ads.google.com">Advertising</a></li>
+                <li class="footerL"><a href="https://business.google.com">Business</a></li>
+                <li class="footerL"><a href="https://about.google.com">About</a></li>
+                <li class="footerL"><a href="https://www.google.com/search/howsearchworks/">How Search Works</a></li>
+            </ul>
+            <ul>
+                <li class="footerR"><a href="#">Settings</a></li>
+                <li class="footerR"><a href="https://policies.google.com/terms">Terms</a></li>
+                <li class="footerR"><a href="https://policies.google.com/privacy">Privacy</a></li>
+            </ul>
         </div>
     </body>
 </html>
